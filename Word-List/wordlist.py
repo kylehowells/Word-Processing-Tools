@@ -32,7 +32,8 @@ def main():
 	if os.path.isdir(inputPath):
 		for f in os.listdir(inputPath):
 			if f.endswith(".txt"):
-				all_words.update( getWordsFromFile(f) )
+				filepath = os.path.join(inputPath, f)
+				all_words.update( getWordsFromFile(filepath) )
 	else:
 		all_words.update( getWordsFromFile(inputPath) )
 
