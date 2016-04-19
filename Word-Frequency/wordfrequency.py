@@ -24,6 +24,7 @@ def main():
 	parser = argparse.ArgumentParser(description='Scans a text file (or a directory) and generates a word list from that file.')
 	parser.add_argument('-i', action='store', dest='input', required=True, help='The input filepath')
 	parser.add_argument('-o', action='store', dest='output', default="wordfrequency.txt", help='The output filepath')
+	parser.add_argument('-min', action='store', dest='minfreq', type=int, default=0, help='The minimum word frequency for a word to be included in the output')
 	args = parser.parse_args()
 
 
@@ -57,11 +58,13 @@ def main():
 	#
 	# Save word counts to a file
 	#
+	requiredFreq = args.minfreq
 
 	# Create a list we can sort
 	wordList = list()
 	for key, value in wordCounts.items():
-		wordList.append( (key, value) ) # ("word", count)
+		if value >= requiredFreq:
+			wordList.append( (key, value) ) # ("word", count)
 
 	# sort by the 2nd element in the tuple (highest first)
 	wordList.sort(key=lambda tup: tup[1], reverse=True)
