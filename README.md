@@ -1,7 +1,9 @@
 # Word-Processing-Tools
 A collection of command line tools I wrote to process text files. Written in Python 3
 
-**Note:** These tools are written to scan files line by line to minimise ram requirements and allow it to process very large files.
+**Notes:**
+- These tools are written to scan files line by line to minimise ram requirements and allow it to process very large files.
+- These tools are written to be cross platform, so they can be used on OSX and Windows.
 
 ## Word-List
 This scans a text file (or all text files in a directory) and builds a word list of all the words it finds.
