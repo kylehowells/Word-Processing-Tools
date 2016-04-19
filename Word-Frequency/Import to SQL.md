@@ -1,13 +1,13 @@
 # Import Words into SQLite
 
 
-**Commands**
-
 Create a SQLite file.
 
 ```bash
 sqlite words.db
 ```
+
+### sqlite3 commands
 
 Create the table to put the data in.
 
