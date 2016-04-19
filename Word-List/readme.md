@@ -10,4 +10,4 @@ python wordlist.py -i "books/" -o "words.txt"
 python wordlist.py -i "input_file.txt" -o "output-wordlist.txt"
 ```
 
-**Note:** This is written to scan files line by line so as to minimise ram requirements and allow it to process very large files.
+**Note:** This is written to scan files line by line to minimise ram requirements and allow it to process very large files.
