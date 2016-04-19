@@ -4,10 +4,10 @@
 Create a SQLite file.
 
 ```bash
-sqlite words.db
+sqlite3 words.db
 ```
 
-### sqlite3 commands
+### sqlite3 Commands
 
 Create the table to put the data in.
 
