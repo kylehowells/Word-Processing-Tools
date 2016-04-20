@@ -27,3 +27,6 @@ python wordfrequency.py -i "input_file.txt"
 python wordfrequency.py -i "input_directory"
 python wordfrequency.py -i "input_file.txt" -o "output-wordlist.txt"
 ```
+
+`wordfilters.py` is a small tool to filter the output from `wordfrequency.py` in several different ways.
+
