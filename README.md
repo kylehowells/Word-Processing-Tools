@@ -16,6 +16,9 @@ python wordlist.py -i "books/" -o "words.txt"
 python wordlist.py -i "input_file.txt" -o "output-wordlist.txt"
 ```
 
+`dictionary-filter.py` is a tool to filter the resulting wordlist to remove non-words, names, abbreviations and swear words from the resulting word list (requires a Plist dictionary file generated on OSX).
+
+
 ## Word-Frequency
 
 Scans a text file (or all text files in a directory) and and counts how many times it has seen each word.
