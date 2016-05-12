@@ -74,6 +74,7 @@ def main():
 			if args.names and len(lexicalClasses) == 0: # Names have no lexical class in our dictionary
 				continue
 			if args.abbr and len(lexicalClasses) == 1 and "abbreviation" in lexicalClasses: # If the word is only an abbreviation
+				# TODO: filter out 'suffix' words as well ("ful"). Remove all disallowed lexicalClasses then check if len(lexicalClasses) == 0 and remove as needed
 				continue
 			if args.vulgar and "vulgar slang" in definition: # Swear words
 				continue
