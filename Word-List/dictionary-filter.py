@@ -38,6 +38,7 @@ def main():
 	parser.add_argument('-names', action='store_true', dest='names', help='Filter out proper names (words without a lexical class).')
 	parser.add_argument('-len', action='store', dest='lenth', type=int, default=0, help='The minimum required word lenth') # TODO: Add a maximum length
 	# TODO: Find some way to filter out words that ONLY have an 'informal' meaning
+	# TODO: "tho" = "informal spelling of " "though" filter out those as well
 	# TODO: Some abbreviations aren't marked as such: Example: "pac" = political action committee. "short for "
 	args = parser.parse_args()
 
