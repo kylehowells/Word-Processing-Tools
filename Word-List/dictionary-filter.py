@@ -37,7 +37,28 @@ def main():
 	parser.add_argument('-abbr', action='store_true', dest='abbr', help='Filter out abbreviations.')
 	parser.add_argument('-names', action='store_true', dest='names', help='Filter out proper names (words without a lexical class).')
 	parser.add_argument('-len', action='store', dest='lenth', type=int, default=0, help='The minimum required word lenth') # TODO: Add a maximum length
-	# TODO: Find some way to filter out words that ONLY have an 'informal' meaning
+	# TODO: Add a blacklist and whitelist ability
+	# TODO: Find some way to filter out words that ONLY have an offsenive 'informal' meaning, informal = slang
+	#
+	# - NOTES - 
+	# 'derogatory' another term to look out for.
+	# And ' short for ' with abbreviations. "sjw" wasn't picked up as an abbri
+	# "also used as a general term of abuse"
+	#
+	# "Yid |yid| ▶noun informal, offensive a Jew."
+	# "▶adjective informal"
+	# "▶noun informal" lexical class then informal. The informal seems to apply to the lexical class.
+	# Attach the fact the lexical class is informal to it somehow? Also look into words than can be used as...
+	# ...a certain lexical class both formally and informally.
+	#
+	# TODO: Remove 'combiner' words too.
+	# "▶comb" = combiner, "sexi" -> "sexier". It combines with an ending.
+	#
+	# Used to end the ORIGIN: section
+	# " abbreviation."
+	# " abbreviation of "
+	#
+	# "▶exclam"
 	args = parser.parse_args()
 
 	inputPath = args.input
