@@ -39,6 +39,7 @@ def main():
 	parser.add_argument('-len', action='store', dest='lenth', type=int, default=0, help='The minimum required word lenth') # TODO: Add a maximum length
 	# TODO: Add a blacklist and whitelist ability
 	# TODO: Find some way to filter out words that ONLY have an offsenive 'informal' meaning, informal = slang
+	# TODO: Some abbreviations aren't marked as such: Example: "pac" = political action committee. "short for "
 	#
 	# - NOTES - 
 	# 'derogatory' another term to look out for.
@@ -59,6 +60,7 @@ def main():
 	# " abbreviation of "
 	#
 	# "▶exclam"
+	# TODO: "tho" = "informal spelling of " "though" filter out those as well
 	args = parser.parse_args()
 
 	inputPath = args.input
@@ -95,6 +97,7 @@ def main():
 			if args.names and len(lexicalClasses) == 0: # Names have no lexical class in our dictionary
 				continue
 			if args.abbr and len(lexicalClasses) == 1 and "abbreviation" in lexicalClasses: # If the word is only an abbreviation
+				# TODO: filter out 'suffix' words as well ("ful"). Remove all disallowed lexicalClasses then check if len(lexicalClasses) == 0 and remove as needed
 				continue
 			if args.vulgar and "vulgar slang" in definition: # Swear words
 				continue
