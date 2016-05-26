@@ -40,6 +40,7 @@ def main():
 	# TODO: Add a blacklist and whitelist ability
 	# TODO: Find some way to filter out words that ONLY have an offsenive 'informal' meaning, informal = slang
 	# TODO: Some abbreviations aren't marked as such: Example: "pac" = political action committee. "short for "
+	# TODO: Suffix's and prefixes. Example: "ase"
 	#
 	# - NOTES - 
 	# 'derogatory' another term to look out for.
